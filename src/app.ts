@@ -8,10 +8,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.json({
-    message:
-      'Welcome, The nodemailer api is available on route, /mail\nFor help visit /help ',
-  });
+  res.send(
+    'Welcome, The nodemailer api is available on route, /mail\nFor help visit /help '
+  );
 });
 
 app.get('/help', (req, res) => {
